@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinmay Joshi</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Grape+Nuts&family=Indie+Flower&family=Orbitron&family=Playfair+Display&family=Poppins:wght@700&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Marcellus&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+      .about-text, .project-text, .contact-text, .below-chinmay{
+        font-family: 'Orbitron', sans-serif;
+      }
+     </style>
+</head>
+<body>
+    <div>
+        <div id="s1">
+            <canvas id="c" class="c"></canvas>
+            <script type="module" src="./main.js"></script>
+             <div id="intro" class="intro" >
+                      <p class="hey">HI THERE, I'm</p>
+                       <p class="text">Chinmay</p>
+                     <p class="below-chinmay">DESIGNER | DEVELOPER</p>
+                    <p id="myself" class="myself">A self-learnt frontend Developer based in Mumbai, India</p>
+             </div>
+      
+        </div>
+        <div onclick="clicked()" id="click" class="click">
+          &#10086
+        </div>
+        <div id="sub-section" class="sub-section">
+          <div onclick="closed()" class="closedown">
+            <p>&#10087</p>
+          </div>
+          <div id="About" class="sub1">
+            <p class="back">[</p>
+            <p>About</p>
+            <p class="back">]</p>
+          </div>
+          <div id="Project" class="sub1">
+            <p class="back">[</p>
+            <p>Projects</p>
+            <p class="back">]</p>
+          </div>
+          <div id="Contact" class="sub1">
+            <p class="back">[</p>
+            <p>Contact</p>
+            <p class="back">]</p>
+          </div>
+        </div>
+    </div>
+    
+    <div class="sub-grp">
+      <div id="about-window" class="about-window">
+      <div class="up-brackets">
+        <p class="left">&#10098</p>
+        <p class="close-sub" id="close-sub1">&#10087</p>
+        <p class="right">&#10098</p>
+      </div>
+      <div class="down-brackets">
+        <p class="left">&#10098</p>
+        <p class="right">&#10098</p>
+      </div> 
+        <div class="about-text">
+           <p>A freshman at IIIT Jabalpur with love for Web Dev. Always seeking to be better than before & enhance my skills. Everyone starts their journey at some point, so looking for Industrial projects as a Junior Dev.</p>
+        </div>
+      </div>
+      <div id="project-window" class="project-window">
+      <div class="up-brackets">
+        <p class="left">&#10098</p>
+        <p  class="close-sub"  id="close-sub2">&#10087</p>
+        <p class="right">&#10098</p>
+      </div>
+      <div class="down-brackets">
+        <p class="left">&#10098</p>
+        <p class="right">&#10098</p>
+      </div> 
+      <div class="project-text">
+            <div class="cards">
+               <div class="card1">
+                 <img src="./img/weatherapp.PNG" alt="">
+                 <p>Weather App</p>
+                 <p></p>
+               </div>
+            </div>
+      </div>
+      </div>
+      <div id="contact-window" class="contact-window">
+        <div class="up-brackets">
+          <p class="left">&#10098</p>
+          <p class="close-sub" id="close-sub3">&#10087</p>
+          <p class="right">&#10098</p>
+        </div>
+        <div class="down-brackets">
+          <p class="left">&#10098</p>
+          <p class="right">&#10098</p>
+        </div> 
+        <div class="contact-text">
+             <p class="contact-form">Contact Form on the way ... Until that please refer the Links below ^_^ </p>
+             <a target="_blank" href="http://www.instagram.com/jawhawk160/"><img class="insta" src="./img/computer-icons-instagram-logo-sticker-logo-removebg-preview.png" alt=""></a>
+           <a target="_blank" href="https://www.linkedin.com/in/chinmay-joshi-b676961aa/"><img class="linkedin" src="./img/LinkedIn2.png" alt=""></a>
+        </div>
+        </div>
+    </div>
+ <!--text floatation-->
+    <script>
+        var text = $('.text').text(),
+    textArr = text.split('');
+
+$('.text').html('');
+
+$.each(textArr, function(i, v){
+  if(v == ' '){$('.text').append('<span class="space"></span>');}
+  $('.text').append('<span>'+v+'</span>');
+  
+});
+    </script>
+
+<!--intro Scrolling effect-->
+<script>
+  let  pos = "245";
+  let x = 1;
+  let y = 1;
+  let ScrollY = 0;
+  function scroll() {
+    if (window.scrollY > ScrollY) {
+      position = String(parseInt(pos) - x) + "px" ;
+      left = String(y + 15) + "%";
+      document.getElementById("intro").style.top = position;  
+      x = x + 4.5;
+      
+    } else {
+    document.getElementById("intro").style.top = "245px";
+    x = 1;
+    }
+    ScrollY = window.scrollY
+  }
+</script>
+<!-- Menu sub section-->
+<script>
+ function clicked() {   
+   $(document).ready(function(){
+    $("#sub-section").show();
+    $("#sub-section").animate({right: '5vw'});
+});
+document.getElementById("click").style.display = "none"
+ }
+ 
+ function closed() {
+  document.getElementById("sub-section").style.display = "none"
+  document.getElementById("click").style.display = "block"
+ }
+</script>
+<!--sub part section-->
+<script>
+document.getElementById("About").addEventListener("click",()=>{
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("sub-section").style.display = "none";
+  document.getElementById("about-window").style.display = "block";
+})
+document.getElementById("Project").addEventListener("click",()=>{
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("sub-section").style.display = "none";
+  document.getElementById("project-window").style.display = "block";
+})
+document.getElementById("Contact").addEventListener("click",()=>{
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("sub-section").style.display = "none";
+  document.getElementById("contact-window").style.display = "block";
+})
+document.getElementById("close-sub1").addEventListener("click",()=>{
+  document.getElementById("about-window").style.display = "none";
+  document.getElementById("sub-section").style.display = "block";
+  document.getElementById("intro").style.display = "flex";
+})
+document.getElementById("close-sub2").addEventListener("click",()=>{
+   document.getElementById("project-window").style.display = "none";
+  document.getElementById("sub-section").style.display = "block";
+  document.getElementById("intro").style.display = "flex";
+})
+document.getElementById("close-sub3").addEventListener("click",()=>{
+   document.getElementById("contact-window").style.display = "none";
+  document.getElementById("sub-section").style.display = "block";
+  document.getElementById("intro").style.display = "flex";
+})
+
+</script>
+
+</body>
+</html>

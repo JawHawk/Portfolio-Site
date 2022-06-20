@@ -1,0 +1,59 @@
+.about-window .about-text {
+  width: 70vw;
+  height: 300px;
+  background: lightcyan;
+  text-align: center;
+  position: absolute;
+  z-index: -1;
+  top: 150px;
+  left: 10vw;
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+}
+
+.about-window .up-brackets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 40px;
+  margin: -40px 0 0 0;
+  width: 80vw;
+}
+
+.about-window .up-brackets .right {
+  -webkit-transform: rotateZ(135deg);
+          transform: rotateZ(135deg);
+}
+
+.about-window .up-brackets .left {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.about-window .down-brackets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 40px;
+  position: relative;
+  top: 300px;
+  margin-top: -40px;
+  width: 80vw;
+}
+
+.about-window .down-brackets .right {
+  -webkit-transform: rotateZ(-135deg);
+          transform: rotateZ(-135deg);
+}
+
+.about-window .down-brackets .left {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+/*# sourceMappingURL=exp.css.map */

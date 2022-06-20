@@ -1,0 +1,41 @@
+.about-window{
+.about-text{
+    width: 70vw;
+    height: 300px;
+    background: lightcyan;
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+    top: 150px;
+    left: 10vw;
+    transform: translateX(-5%);
+}
+.up-brackets{
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    margin: -40px 0 0 0;
+    width: 80vw;
+    .right{
+        transform: rotateZ(135deg);
+    }
+    .left{
+        transform: rotateZ(45deg);
+    }
+}
+.down-brackets{
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    position: relative;
+    top: 300px;
+    margin-top: -40px;
+    width: 80vw;
+    .right{
+        transform: rotateZ(-135deg);
+    }
+    .left{
+        transform: rotateZ(-45deg);
+    }
+}
+}
